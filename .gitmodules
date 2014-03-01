@@ -4,3 +4,6 @@
 [submodule "content/mu-plugins/wordpress-importer"]
 	path = content/mu-plugins/wordpress-importer
 	url = git@github.com:wp-plugins/wordpress-importer.git
+[submodule "content/plugins/site-secrets"]
+	path = content/plugins/site-secrets
+	url = git@github.com:danielbachhuber/Site-Secrets.git
