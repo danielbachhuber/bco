@@ -106,7 +106,7 @@ define( 'DISALLOW_FILE_EDIT', true );
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) )
-	define( 'ABSPATH', dirname(__FILE__) . '/' );
+	define( 'ABSPATH', dirname(__FILE__) . '/wp/' );
 
 /** Sets up WordPress vars and included files. */
 require_once( ABSPATH . 'wp-settings.php' );
