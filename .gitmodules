@@ -7,3 +7,7 @@
 [submodule "content/plugins/site-secrets"]
 	path = content/plugins/site-secrets
 	url = git@github.com:danielbachhuber/Site-Secrets.git
+[submodule "content/themes/media-library"]
+	path = content/themes/media-library
+	url = git@github.com:danielbachhuber/media-library.git
+	branch = master
