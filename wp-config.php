@@ -41,8 +41,8 @@ $wp_constant_defaults = array(
 	'SECURE_AUTH_SALT'   => '',
 	'LOGGED_IN_SALT'     => '',
 	'NONCE_SALT'         => '',
-	'WP_SITEURL'         => '',
-	'WP_HOME'            => '',
+	'WP_SITEURL'         => 'http://' . $_SERVER['HTTP_HOST'] . '/wp',
+	'WP_HOME'            => 'http://' . $_SERVER['HTTP_HOST'],
 	'WP_DEFAULT_THEME'   => '',
 	);
 
