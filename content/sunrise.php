@@ -58,3 +58,16 @@ if ( ! empty( $mapped_blog[0] ) ) {
 	define( 'COOKIE_DOMAIN', $_SERVER[ 'HTTP_HOST' ] );
 	define( 'DOMAIN_MAPPING', 1 );
 }
+
+/**
+ * Force mapped domain on the frontend
+ */
+if ( ! is_admin() && false !== ( $key = array_search( $_SERVER['HTTP_HOST'], $mapped_domains ) ) ) {
+
+	if ( $key != $_SERVER['HTTP_HOST'] ) {
+		header( 'Location: http://' . $key . $_SERVER['REQUEST_URI'] );
+		exit;
+	}
+
+}
+
