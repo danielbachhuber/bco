@@ -23,6 +23,15 @@ if ( file_exists( dirname( __FILE__ ) . '/wp-config-env.php' ) )
 	include( dirname( __FILE__ ) . '/wp-config-env.php' );
 
 /**
+ * Make sure the HTTP_HOST context is always set for WP-CLI
+ */
+if ( isset( $_SERVER['WP_CLI_PHP_USED'] )
+	&& ! isset( $_SERVER['HTTP_HOST'] )
+	&& defined( 'PRIMARY_DOMAIN' ) ) {
+	$_SERVER['HTTP_HOST'] = PRIMARY_DOMAIN;
+}
+
+/**
  *	Production settings.
  */
 
@@ -101,6 +110,20 @@ define( 'WPMU_PLUGIN_URL', WP_HOME . '/content/mu-plugins' );
 
 // Prevent editing of files through the admin.
 define( 'DISALLOW_FILE_EDIT', true );
+
+/**
+ * This environment is always multisite,
+ * but in the WP-CLI installation process we need it to
+ * be treated as a single instance.
+ * 
+ * Also, address a core bug in wp-activate.php
+ * @see https://core.trac.wordpress.org/ticket/23197
+ */
+if ( ( ! defined( 'WP_INSTALLING' ) || ! WP_INSTALLING )
+	|| ( ! empty( $_SERVER['PHP_SELF'] ) && '/wp/wp-activate.php' == $_SERVER['PHP_SELF'] ) ) {
+	define( 'MULTISITE', true );
+	define( 'SUBDOMAIN_INSTALL', true );
+}
 
 /* That's all, stop editing! Happy blogging. */
 
