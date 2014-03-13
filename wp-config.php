@@ -108,6 +108,9 @@ define( 'WP_CONTENT_URL', WP_HOME . '/content' );
 define( 'WPMU_PLUGIN_DIR', dirname( __FILE__ ) . '/content/mu-plugins' );
 define( 'WPMU_PLUGIN_URL', WP_HOME . '/content/mu-plugins' );
 
+// We be doing domain mapping
+define( 'SUNRISE', true );
+
 // Prevent editing of files through the admin.
 define( 'DISALLOW_FILE_EDIT', true );
 
