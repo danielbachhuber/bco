@@ -11,3 +11,6 @@
 	path = content/themes/media-library
 	url = git@github.com:danielbachhuber/media-library.git
 	branch = master
+[submodule "content/themes/new-p2"]
+	path = content/themes/new-p2
+	url = git@github.com:danielbachhuber/new-p2.git
