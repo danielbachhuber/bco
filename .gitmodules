@@ -14,3 +14,6 @@
 [submodule "content/themes/new-p2"]
 	path = content/themes/new-p2
 	url = git@github.com:danielbachhuber/new-p2.git
+[submodule "content/mu-plugins/easy-mode-auto-deploy"]
+	path = content/mu-plugins/easy-mode-auto-deploy
+	url = git@github.com:danielbachhuber/Easy-Mode-Auto-Deploy.git
