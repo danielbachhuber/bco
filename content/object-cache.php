@@ -1,0 +1,1 @@
+mu-plugins/wordpress-memcached-backend/object-cache.php
