@@ -20,3 +20,6 @@
 [submodule "content/mu-plugins/wordpress-memcached-backend"]
 	path = content/mu-plugins/wordpress-memcached-backend
 	url = git@github.com:danielbachhuber/wordpress-memcached-backend.git
+[submodule "content/plugins/akismet"]
+	path = content/plugins/akismet
+	url = git@github.com:wp-plugins/akismet.git
