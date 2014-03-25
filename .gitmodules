@@ -23,3 +23,6 @@
 [submodule "content/plugins/akismet"]
 	path = content/plugins/akismet
 	url = git@github.com:wp-plugins/akismet.git
+[submodule "content/mu-plugins/wordpress-mu-domain-mapping"]
+	path = content/mu-plugins/wordpress-mu-domain-mapping
+	url = git@github.com:wp-plugins/wordpress-mu-domain-mapping.git
