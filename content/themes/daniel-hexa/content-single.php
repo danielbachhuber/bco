@@ -19,7 +19,9 @@ $formats = get_theme_support( 'post-formats' );
 		<?php else : ?>
 			<span class="entry-format"></span>
 		<?php endif; ?>
+		<?php if ( ! in_array( $format, daniel_hexa_titleless_formats() ) ) : ?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

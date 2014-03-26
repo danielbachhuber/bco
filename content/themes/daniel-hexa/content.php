@@ -18,9 +18,11 @@ $formats = get_theme_support( 'post-formats' );
 	<?php else : ?>
 		<span class="entry-format"></span>
 	<?php endif; ?>
+	<?php if ( ! in_array( $format, daniel_hexa_titleless_formats() ) ) : ?>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' ); ?>
 	</header><!-- .entry-header -->
+	<?php endif; ?>
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
