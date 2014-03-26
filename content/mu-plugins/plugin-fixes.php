@@ -6,10 +6,9 @@
 
 add_filter( 'pre_option_siteurl', function( $value ) {
 
-	if ( $value && defined( 'DOMAIN_MAPPING' ) ) {
-		$value .= '/wp';
+	if ( $value && false === stripos( $value, '/wp' ) && function_exists( 'get_original_url' ) ) {
+		$value = get_original_url( "siteurl" );
 	}
-
 	return $value;
 }, 99 );
 
