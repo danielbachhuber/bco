@@ -1,0 +1,11 @@
+/*
+Theme Name:     Daniel's child theme of Hexa
+Theme URI:      http://danielbachhuber.com
+Description:    Hexa child theme.
+Author:         Daniel Bachhuber
+Author URI:     http://danielbachhuber.com
+Template:       hexa
+Version:        0.1.0
+*/
+
+@import '../hexa/style.css';
