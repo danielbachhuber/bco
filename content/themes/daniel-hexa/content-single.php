@@ -40,6 +40,5 @@ $formats = get_theme_support( 'post-formats' );
 			<?php echo $tags_list; ?>
 		</span>
 		<?php endif; // End if $tags_list ?>
-		<?php edit_post_link( __( 'Edit', 'hexa' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
